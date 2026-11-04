@@ -17,7 +17,7 @@ ComfyUI 自定义节点与工作流合集, 面向本地 MiniMax H3 视频生成.
    | `DSH_ref2av.json` | **正向替换**：输入「白模 + 绿幕」视频 + 人物参考图 + 背景参考图, 输出「人物换到白模身上、背景替换绿幕」的成品视频, 同时保留原视频的人物动作、节奏与运镜 |
    | `DSH_ref2av_for_milkyfrog.json` | **正向替换 · 奶蛙版**：结构与 `DSH_ref2av` 相同, 但提示词改写为适配一个**略胖大肚子黄色生物**（"奶蛙"）, 并额外约束「不得继承源视频的人体比例」. 输入奶蛙三视图 + 背景图 + 白模绿幕视频, 输出**奶蛙跳舞视频** |
    | `DSH_av2ref.json` | **反向生成**：输入任意成品视频, 输出「白色无特征人偶 + 纯绿幕」的素材视频, 动作与时长保持一致 |
-   | `DSH_av2av.json` | **正向一步替换**：输入任意成品视频 + 人物参考图, 输出「人物换到原人物身上」的成品视频, 同时保留原视频的背景、BGM、人物动作、节奏与运镜 |
+   | `GPT_av2av.json` | **正向一步替换**：输入任意成品视频 + 人物参考图, 输出「人物换到原人物身上」的成品视频, 同时保留原视频的背景、BGM、人物动作、节奏与运镜<br>这里用到了两个社区模型:<br>1. https://huggingface.co/RunningHubAI/rh-minimax-h3-dmd-ref2va-8step-turbo-pruned.safetensors-lora<br>2. https://huggingface.co/drbaph/MiniMax-H3-Turbo-Lora-ComfyUI/blob/main/experimental/minimax_h3_dmd_ref2va_8step_turbo_pruned.safetensors?utm_source=chatgpt.com|
 
 2. **几个自定义节点**（本仓库的原创代码）：
 
